@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaInstagram, FaEnvelope, FaMapMarkerAlt, FaDownload } from 'react-icons/fa';
 import Image from 'next/image';
-import jabezImage from '@/images/jabez.jpg';
+import jabezImage from '@/images/jabez 1.jpg';
 
 export default function Hero() {
   return (
@@ -134,9 +134,10 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 1.4 }}
               className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4"
             >
-              <button className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                <FaDownload className="inline mr-2" />
-                Download Resume
+              <button 
+              onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Experience
               </button>
               <button 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -166,10 +167,11 @@ export default function Hero() {
                 <Image
                   src={jabezImage}
                   alt="Jabez Livingstone"
-                  width={480}
-                  height={480}
-                  className="w-full h-full object-cover"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover object-center scale-110"
                   priority
+                  quality={95}
                 />
               </div>
               

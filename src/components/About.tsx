@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { FaBriefcase, FaUsers, FaGlobe, FaChartLine } from 'react-icons/fa';
 import Image from 'next/image';
-import jabezImage2 from '@/images/jabez 1.jpg';
+import jabezImage2 from '@/images/jabez.jpg';
 
 export default function About() {
   const containerVariants = {
